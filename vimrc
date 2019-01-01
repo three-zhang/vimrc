@@ -636,23 +636,15 @@ let g:multi_cursor_quit_key = '<Esc>'
 " 文本搜索工具
 " Plug 'rking/ag.vim'
 
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup\ --nocolor
-  " Use ag in CtrlP for listing files.
-"   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-  let g:ctrlp_user_command = 'ag %s -l –nocolor –hidden -g ""'
-  " Ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-  " 替换ACK
-  let g:ackprg = 'ag --vimgrep'
-  " 替换 ctrlsf
-  let g:ctrlsf_ackprg = 'ag' 
-endif
+    " Use Ag over Grep
+set grepprg=ag\ --nogroup\ --nocolor
 
 
 " 文本搜索工具
 " Plug 'mileszs/ack.vim'
+
+    " 替换ACK
+let g:ackprg = 'ag --vimgrep'
 
 
 " 搜索插件grep
@@ -668,11 +660,11 @@ let g:ctrlp_cmd = 'CtrlP'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 " set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_custom_ignore = {'dir': '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$', 'link': 'some_bad_symbolic_links'}
+let g:ctrlp_user_command = 'ag %s -l –nocolor –hidden -g ""'
+    " Ag is fast enough that CtrlP doesn't need to cache
+let g:ctrlp_use_caching = 0
 
-let g:ctrlp_user_command = 'find %s -type f'        " MacOSX/Linux
-" let g:ctrlp_user_command = 'dir %s /-n /b /s /a-d'  " Windows
 
 " 在没有显式起始目录的情况下调用时，ctrl lp将根据这个变量设置它的本地工作目录
 let g:ctrlp_working_path_mode = 'ra'
