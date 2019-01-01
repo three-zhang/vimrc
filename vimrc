@@ -14,7 +14,6 @@ call plug#begin('~/.vim/plugged')
 
 " 皮肤配色
 Plug 'tomasr/molokai'
-Plug 'sickill/vim-monokai'
 
 " 首页
 Plug 'mhinz/vim-startify'
@@ -340,10 +339,8 @@ endfunc
 
 " 皮肤配色
 " Plug 'tomasr/molokai'
-" Plug 'sickill/vim-monokai'
 
 colorscheme molokai
-" colorscheme monokai
 
 
 " 首页
