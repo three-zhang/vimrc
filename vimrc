@@ -51,6 +51,9 @@ Plug 'mhinz/vim-signify'
 " powerline git状态
 Plug 'tpope/vim-fugitive'
 
+" TODO list
+Plug 'vim-scripts/TaskList.vim'
+
 " 显示文件类型图标（开启影响性能）
 " Plug 'ryanoasis/vim-devicons'
 
@@ -106,6 +109,7 @@ Plug 'terryma/vim-expand-region'
 
 " 多光标操作
 Plug 'terryma/vim-multiple-cursors'
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -449,6 +453,12 @@ nnoremap <leader>bp :bp<CR>
 " powerline git状态
 " Plug 'tpope/vim-fugitive'
 " 无配置
+
+
+" TODO list
+" Plug 'vim-scripts/TaskList.vim'
+    " 映射快捷键
+map <leader>todo <Plug>TaskList
 
 
 " 显示文件类型图标
