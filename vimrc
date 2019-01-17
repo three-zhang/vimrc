@@ -8,7 +8,7 @@
 
 "加载插件""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('$HOME/.vim/plugged')
 
 "显示插件""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -110,6 +110,10 @@ Plug 'terryma/vim-expand-region'
 " 多光标操作
 Plug 'terryma/vim-multiple-cursors'
 
+" markdown 语法高亮
+Plug 'plasticboy/vim-markdown'
+
+" markdown 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -638,6 +642,18 @@ let g:multi_cursor_prev_key = '<C-;>'
 let g:multi_cursor_skip_key = '<C-x>'
     " 退出
 let g:multi_cursor_quit_key = '<Esc>'
+
+" markdown 语法高亮
+" Plug 'plasticboy/vim-markdown'
+
+    " LaTex 数学公式
+let g:vim_markdown_math = 1
+    " YAML
+let g:vim_markdown_frontmatter = 1
+    " JSON
+let g:vim_markdown_json_frontmatter = 1
+    " TOML
+let g:vim_markdown_toml_frontmatter = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
