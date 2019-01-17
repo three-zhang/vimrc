@@ -145,6 +145,19 @@ call plug#end()
 
 "基础配置""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" 判断系统
+if has('win32')
+    " 隐藏菜单栏
+    set guioptions-=m
+    " 隐藏工具栏
+    set guioptions-=T
+    " 设置字体
+	set guifont=DroidSansMonoforPowerline:h9
+else
+    " 设置字体
+	set guifont=DroidSansMono_Nerd_Font:h12
+endif
+
 " 不与 Vi 兼容（采用 Vim 自己的操作命令）。
 set nocompatible
 
@@ -152,16 +165,9 @@ set nocompatible
 filetype off
 
 " 使用 utf-8 编码。
+set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
-set encoding=utf-8
-
-" 设置字体
-if has('win32')
-	set guifont=DroidSansMonoforPowerline:h9
-else
-	set guifont=DroidSansMono_Nerd_Font:h12
-endif
 
 " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 set completeopt=longest,menu	
