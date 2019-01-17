@@ -157,7 +157,11 @@ set termencoding=utf-8
 set encoding=utf-8
 
 " 设置字体
-set guifont=DroidSansMono_Nerd_Font:h12
+if has('win32')
+	set guifont=DroidSansMonoforPowerline:h9
+else
+	set guifont=DroidSansMono_Nerd_Font:h12
+endif
 
 " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 set completeopt=longest,menu	
