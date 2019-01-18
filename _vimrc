@@ -727,8 +727,11 @@ let g:ackprg = 'ag --vimgrep'
 let g:ctrlp_map = '<C-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-" set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+if has('win32')
+    set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
+else
+    set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+endif
 
 let g:ctrlp_custom_ignore = {'dir': '\v[\/]\.(git|hg|svn)$', 'file': '\v\.(exe|so|dll)$', 'link': 'some_bad_symbolic_links'}
 let g:ctrlp_user_command = 'ag %s -l –nocolor –hidden -g ""'
