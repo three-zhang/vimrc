@@ -57,6 +57,13 @@ Plug 'vim-scripts/TaskList.vim'
 " 显示文件类型图标（开启影响性能）
 " Plug 'ryanoasis/vim-devicons'
 
+if has('win32')
+    " gvim 透明dll
+    Plug 'mattn/vimtweak'
+    " gvim 透明插件
+    Plug 'mattn/transparency-windows-vim'
+endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "检测插件""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
