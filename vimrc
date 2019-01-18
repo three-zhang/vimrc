@@ -57,12 +57,22 @@ Plug 'vim-scripts/TaskList.vim'
 " 显示文件类型图标（开启影响性能）
 " Plug 'ryanoasis/vim-devicons'
 
+" markdown 语法高亮
+Plug 'plasticboy/vim-markdown'
+
+" markdown 数学符号预览
+Plug 'iamcco/mathjax-support-for-mkdp'
+
+" markdown 预览
+Plug 'iamcco/markdown-preview.vim'
+
 if has('win32')
     " gvim 透明dll
     Plug 'mattn/vimtweak'
     " gvim 透明插件
     Plug 'mattn/transparency-windows-vim'
 endif
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -117,10 +127,6 @@ Plug 'terryma/vim-expand-region'
 " 多光标操作
 Plug 'terryma/vim-multiple-cursors'
 
-" markdown 语法高亮
-Plug 'plasticboy/vim-markdown'
-
-" markdown 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -487,6 +493,38 @@ map <leader>todo <Plug>TaskList
 " Plug 'ryanoasis/vim-devicons'
 " 无配置
 
+
+" markdown 语法高亮
+" Plug 'plasticboy/vim-markdown'
+
+    " LaTex 数学公式
+let g:vim_markdown_math = 1
+    " YAML
+let g:vim_markdown_frontmatter = 1
+    " JSON
+let g:vim_markdown_json_frontmatter = 1
+    " TOML
+let g:vim_markdown_toml_frontmatter = 1
+
+
+" markdown 数学符号预览
+" Plug 'iamcco/mathjax-support-for-mkdp'
+" 无配置
+
+
+" markdown 预览
+" Plug 'iamcco/markdown-preview.vim'
+
+    " 普通模式下 打开预览
+nmap <silent> <F8> <Plug>MarkdownPreview
+    " 插入模式下 关闭预览
+imap <silent> <F8> <Plug>MarkdownPreview
+    " 普通模式下 关闭预览
+nmap <silent> <F9> <Plug>StopMarkdownPreview
+    " 普通模式下 关闭预览
+imap <silent> <F9> <Plug>StopMarkdownPreview
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -659,18 +697,6 @@ let g:multi_cursor_prev_key = '<C-;>'
 let g:multi_cursor_skip_key = '<C-x>'
     " 退出
 let g:multi_cursor_quit_key = '<Esc>'
-
-" markdown 语法高亮
-" Plug 'plasticboy/vim-markdown'
-
-    " LaTex 数学公式
-let g:vim_markdown_math = 1
-    " YAML
-let g:vim_markdown_frontmatter = 1
-    " JSON
-let g:vim_markdown_json_frontmatter = 1
-    " TOML
-let g:vim_markdown_toml_frontmatter = 1
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
