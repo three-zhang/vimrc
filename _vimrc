@@ -210,18 +210,14 @@ set showcmd
 
 " 设置Tab长度为4空格
 set tabstop=4
+set ts=4
 
 " 在文本上按下>>（增加一级缩进）、<<（取消一级缩进）或者==（取消全部缩进）时，每一级的字符数。
 set shiftwidth=4
-
-" 由于 Tab 键在不同的编辑器缩进不一致，该设置自动将 Tab 转为空格。
-set expandtab
+set sw=4
 
 " Tab 转为多少个空格。
 set softtabstop=4
-
-" 继承前一行的缩进方式，适用于多行注释
-set autoindent
 
 " 行号
 set number
@@ -262,6 +258,7 @@ set showmatch
 " 如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块。
 set listchars=tab:»■,trail:■
 set list
+
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -337,6 +334,12 @@ set autoread
 " 第一次按下 Tab，会显示所有匹配的操作指令的清单；第二次按下 Tab，会依次选择各个指令。
 set wildmenu
 set wildmode=longest:list,full
+
+" 继承前一行的缩进方式，适用于多行注释
+set autoindent
+
+" 由于 Tab 键在不同的编辑器缩进不一致，该设置自动将 Tab 转为空格。
+set expandtab
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
