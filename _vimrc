@@ -415,7 +415,7 @@ let g:nerdtree_tabs_open_on_console_startup=1
     " 不显示隐藏文件
 let g:NERDTreeHidden=0
     " 忽略一下文件的显示
-let NERDTreeIgnore=['\.pyc','\~$','\.swp']
+let NERDTreeIgnore=['\.o','\~$','\.swp','\.gcda','\.gcno']
     " 当NERDTree为剩下的唯一窗口时自动关闭
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
     " F2开启关闭
