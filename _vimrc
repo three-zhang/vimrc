@@ -88,11 +88,20 @@ Plug 'lilydjwg/fcitx.vim'
 " vim 中执行系统命令
 Plug 'christoomey/vim-run-interactive'
 
+" go插件
+Plug 'fatih/vim-go'
+
 " 代码补全
-Plug 'Valloric/YouCompleteMe', {'do':'python3 install.py --clang-completer'}
+Plug 'Valloric/YouCompleteMe', {'do':'python3 install.py --clang-completer --go-completer'}
 
 " ycm 配置文件
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+
+" 补全引擎
+Plug 'SirVer/ultisnips'
+
+" 补全规则
+Plug 'honza/vim-snippets'
 
 " vim中重命名
 Plug 'danro/rename.vim'
@@ -402,6 +411,34 @@ let g:tagbar_autofocus = 1
     " F3开启关闭
 nmap <silent> <F3> :Tagbar<cr>
 
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
+
 
 " NERDTree是一个用于浏览文件系统的树形资源管理外挂。
 " Plug 'scrooloose/nerdtree'
@@ -550,6 +587,24 @@ imap <silent> <F9> <Plug>StopMarkdownPreview
 nnoremap <leader>ri :RunInInteractiveShell<space>
 
 
+" go插件
+" Plug 'fatih/vim-go'
+    " 禁止自动下载
+let g:go_disable_autoinstall = 0
+    " 函数高亮
+let g:go_highlight_functions = 1
+    " 方法高亮
+let g:go_highlight_methods = 1
+    " 结构体高亮
+let g:go_highlight_structs = 1
+    " 高亮
+let g:go_highlight_operators = 1
+    " 高亮
+let g:go_highlight_build_constraints = 1
+    " 安装插件
+let g:go_fmt_command = "goimports"
+
+
 " 代码补全
 " Plug 'Valloric/YouCompleteMe'
 
@@ -595,7 +650,7 @@ nnoremap <leader>gdl :YcmCompleter GoToDeclaration<CR>
     " 查找光标下的标识符并跳转到其定义。这仅适用于符号的定义位于当前翻译单元中时。
 nnoremap <leader>gdf :YcmCompleter GoToDefinition<CR>
     " 跳转两者结合体
-nnoremap <leader>gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>gde :YcmCompleter GoToDefinitionElseDeclaration<CR>
     " 与GoTo命令相同，只是在AST中查找节点前，不会使用libclang重新编译文件。
 " :YcmCompleter GoToImprecise
     " 显示光标下的变量或方法的类型，以及父类型。
@@ -610,6 +665,20 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
     " 生成项目 .ycm_extra_conf.py 文件
 nnoremap <F12> :YcmGenerateConfig<CR>
+
+
+" 补全引擎
+" Plug 'SirVer/ultisnips'
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+    " If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+" 补全规则
+" Plug 'honza/vim-snippets'
+" 无配置
 
 
 " vim中重命名
