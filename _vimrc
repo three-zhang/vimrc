@@ -238,7 +238,7 @@ set cursorline
 set textwidth=120
 
 " 自动折行，即太长的行分成几行显示。
-set wrap
+" set wrap
 
 " 关闭自动折行
 set nowrap
@@ -274,6 +274,9 @@ set list
 
 
 "操作配置""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" 退格键bug
+set backspace=indent,eol,start
 
 " 启用鼠标
 set mouse=a
@@ -603,6 +606,10 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
     " 安装插件
 let g:go_fmt_command = "goimports"
+    " 关闭保存自动格式化
+let g:go_fmt_autosave = 0
+    " 关闭保存自动格式化
+let g:go_asmfmt_autosave = 0
 
 
 " 代码补全
