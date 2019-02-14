@@ -174,10 +174,10 @@ if has('win32')
     " 隐藏工具栏
     set guioptions-=T
     " 设置字体
-	set guifont=DroidSansMonoforPowerline:h9
+    set guifont=DroidSansMonoforPowerline:h9
 else
     " 设置字体
-	set guifont=DroidSansMono_Nerd_Font:h12
+    set guifont=DroidSansMono_Nerd_Font:h12
 endif
 
 " 不与 Vi 兼容（采用 Vim 自己的操作命令）。
@@ -192,7 +192,7 @@ set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 
 " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
-set completeopt=longest,menu	
+set completeopt=longest,menu
 
 
 "显示配置""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -366,13 +366,13 @@ let mapleader=","
 autocmd BufNewFile *.[ch],*.hpp,*.cpp,Makefile exec ":call SetComment()" 
 " 加入注释 
 func SetComment()
-	call setline(1,"")
-	call append(line("."), "/*")
-	call append(line(".")+1, " *   Copyright (C) Three Zhang")
-	call append(line(".")+2, " *   Copyright (C) QuantMatrix, Inc.") 
-	call append(line(".")+3, " */") 
-	call append(line(".")+4, "")
-	call append(line(".")+5, "")
+    call setline(1,"")
+    call append(line("."), "/*")
+    call append(line(".")+1, " *   Copyright (C) Three Zhang")
+    call append(line(".")+2, " *   Copyright (C) QuantMatrix, Inc.") 
+    call append(line(".")+3, " */") 
+    call append(line(".")+4, "")
+    call append(line(".")+5, "")
 endfunc
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
