@@ -136,6 +136,9 @@ Plug 'terryma/vim-expand-region'
 " 多光标操作
 Plug 'terryma/vim-multiple-cursors'
 
+" 格式化代码
+Plug 'Chiel92/vim-autoformat'
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -265,7 +268,9 @@ set ruler
 set showmatch
 
 " 如果行尾有多余的空格（包括 Tab 键），该配置将让这些空格显示成可见的小方块。
-set listchars=tab:»■,trail:■
+set listchars=tab:→\ ,trail:•
+" set listchars=tab:→\ ,space:·,nbsp:␣,trail:•,eol:¶,precedes:«,extends:»
+" 显示制表符
 set list
 
 
@@ -601,10 +606,10 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
     " 安装插件
 let g:go_fmt_command = "goimports"
-    " 关闭保存自动格式化
-let g:go_fmt_autosave = 0
-    " 关闭保存自动格式化
-let g:go_asmfmt_autosave = 0
+"     " 关闭保存自动格式化
+" let g:go_fmt_autosave = 0
+"     " 关闭保存自动格式化
+" let g:go_asmfmt_autosave = 0
 
 
 " 代码补全
@@ -782,6 +787,17 @@ let g:multi_cursor_prev_key = '<C-;>'
 let g:multi_cursor_skip_key = '<C-x>'
     " 退出
 let g:multi_cursor_quit_key = '<Esc>'
+
+" 格式化代码
+" Plug 'Chiel92/vim-autoformat'
+    " 禁用对vim缩进文件的回退
+let g:autoformat_autoindent = 0
+    " 禁用对vim重新制表
+let g:autoformat_retab = 0
+    " 禁用对vim删除尾随空格
+let g:autoformat_remove_trailing_spaces = 0
+    " 保存文件格式化代码
+au BufWrite * :Autoformat
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
