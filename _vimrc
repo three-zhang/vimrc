@@ -136,6 +136,9 @@ Plug 'terryma/vim-expand-region'
 " 多光标操作
 Plug 'terryma/vim-multiple-cursors'
 
+" 括号补全
+Plug 'jiangmiao/auto-pairs'
+
 " 格式化代码
 Plug 'Chiel92/vim-autoformat'
 
@@ -655,12 +658,7 @@ let g:ycm_key_list_previous_completion = ['<Up>']
 let g:ycm_key_invoke_completion = '<M-;>'
 " let g:ycm_key_invoke_completion = ['<C-Space>']
     " 离开插入模式后自动关闭预览窗口
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif	
-    " 上下左右键的行为 会显示其他信息,inoremap由i 插入模式和noremap不重映射组成，只映射一层，不会映射到映射的映射
-inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
-inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
-inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
     " 该命令尝试执行它可以执行的“最明智的”GoTo操作。
 nnoremap <leader>g :YcmCompleter GoTo<CR>
     " 查找当前行的头文件并跳转到它。
@@ -787,6 +785,31 @@ let g:multi_cursor_prev_key = '<C-;>'
 let g:multi_cursor_skip_key = '<C-x>'
     " 退出
 let g:multi_cursor_quit_key = '<Esc>'
+
+
+" 括号补全
+" Plug 'jiangmiao/auto-pairs'
+    " 设置自动为文本添加圆括号的快捷键，默认为ALT+e。
+let g:AutoPairsShortcutFastWrap = '<M-e>' 
+    " 设置调到下一层括号对的快捷键，默认为ALT+n。
+let g:AutoPairsShortcutJump = '<M-n>' 
+    " 设置撤销飞行模式的快捷键，默认为ALT+b。
+let g:AutoPairsShortcutBackInsert = '<M-b>' 
+    " 把BACKSPACE键映射为删除括号对和引号，默认为1。
+let g:AutoPairsMapBS = 1 
+    " 把ctrl+h键映射为删除括号对和引号，默认为1。
+let g:AutoPairsMapCh = 1 
+    " 把ENTER键映射为换行并缩进，默认为1。
+let g:AutoPairsMapCR = 1 
+    " 当g:AutoPairsMapCR为1时，且文本位于窗口底部时，自动移到窗口中间。
+let g:AutoPairsCenterLine = 1 
+    " 把SPACE键映射为在括号两侧添加空格，默认为1。
+let g:AutoPairsMapSpace = 1 
+    " 启用飞行模式，默认为0。
+let g:AutoPairsFlyMode = 0 
+    " 启用跳出多行括号对，默认为1，为0则只能跳出同一行的括号。
+let g:AutoPairsMultilineClose = 1 
+
 
 " 格式化代码
 " Plug 'Chiel92/vim-autoformat'
