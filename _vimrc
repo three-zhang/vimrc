@@ -191,9 +191,6 @@ set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 
-" 在接受补全后不分裂出一个窗口显示接受的项
-set completeopt-=preview
-
 " 让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 set completeopt=longest,menu
 
@@ -617,8 +614,12 @@ let g:go_asmfmt_autosave = 0
 
 " 代码补全
 " Plug 'Valloric/YouCompleteMe'
-    " 智能关闭自动补全窗口
-let g:ycm_autoclose_preview_window_after_completion = 1
+    " 自动关闭补全
+let g:ycm_add_preview_to_completeopt = 1
+    " 选中补全选项后自动关闭预览窗口
+let g:ycm_autoclose_preview_window_after_completion = 0
+    " 离开插入模式后自动关闭预览窗口
+let g:ycm_autoclose_preview_window_after_insertion = 0
     " 每次打开文件都会提示是否载入YCM配置文件
 let g:ycm_confirm_extra_conf = 0
     " 开启基于tag的补全，可以在这之后添加需要的标签路径
