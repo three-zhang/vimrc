@@ -97,7 +97,7 @@ Plug 'Valloric/YouCompleteMe', {'do':'python3 install.py --clang-completer --go-
 " ycm 配置文件
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
-" 补全引擎
+" 代码片段
 Plug 'SirVer/ultisnips'
 
 " 补全规则
@@ -683,12 +683,12 @@ nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <F12> :YcmGenerateConfig<CR>
 
 
-" 补全引擎
+" 代码片段
 " Plug 'SirVer/ultisnips'
 
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<C-f>"
+let g:UltiSnipsJumpBackwardTrigger="<C-b>"
     " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
