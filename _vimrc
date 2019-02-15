@@ -283,11 +283,6 @@ set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
 
-" 设置粘贴模式
-" 显示空格和tab键在Vim中通过鼠标右键粘贴时会在行首多出许多缩进和空格，
-" 通过set paste可以在插入模式下粘贴内容时不会有任何格式变形、胡乱缩进等问题。
-set paste
-
 " 输入搜索模式时，每输入一个字符，就自动跳到第一个匹配的结果。
 set incsearch
 
@@ -644,6 +639,8 @@ let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
     " 设置在下面几种格式的文件上屏蔽ycm
 let g:ycm_filetype_blacklist = {'tagbar' : 1, 'nerdtree' : 1}
+    " 回车选中当前项
+let g:ycm_key_list_stop_completion = ['<Enter>']
     " youcompleteme  默认tab  s-tab 和 ultisnips 冲突
     " 弹出列表时选择第1项的快捷键
 let g:ycm_key_list_select_completion = ['<Down>']
@@ -654,8 +651,6 @@ let g:ycm_key_invoke_completion = '<M-;>'
 " let g:ycm_key_invoke_completion = ['<C-Space>']
     " 离开插入模式后自动关闭预览窗口
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif	
-    " 回车选中当前项
-inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
     " 上下左右键的行为 会显示其他信息,inoremap由i 插入模式和noremap不重映射组成，只映射一层，不会映射到映射的映射
 inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
 inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
