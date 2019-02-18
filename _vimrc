@@ -448,7 +448,6 @@ let g:tagbar_type_go = {
 
 " NERDTree是一个用于浏览文件系统的树形资源管理外挂。
 " Plug 'scrooloose/nerdtree'
-
     " 显示行号
 let NERDTreeShowLineNumbers=1
     " 设置宽度
