@@ -15,35 +15,35 @@ GoInstallBinaries
 ```
 
 ## 功能键
-###F1
+### F1
 
-###F2
+### F2
 开启NERDTree
 
-###F3
+### F3
 开启tagbar
 
-###F4
+### F4
 
 
-###F5
+### F5
 编译语法检测
 
-###F6
+### F6
 
-###F7
+### F7
 
-###F8
+### F8
 打开 MarkDown 预览
 
-###F9
+### F9
 关闭 MarkDown 预览
 
-###F10
+### F10
 
-###F11
+### F11
 
-###F12
+### F12
 生成ycm配置文件
 
 
@@ -51,19 +51,19 @@ GoInstallBinaries
 
 leader is ,
 
-####vim-airline/vim-airline
+#### vim-airline/vim-airline
 ```
 ,bn 向上翻页
 ,bp 向下翻页
 :b1 跳转至1号buffer
 ```
 
-####vim-scripts/TaskList.vim
+#### vim-scripts/TaskList.vim
 ```
 ,todo 打开todo list
 ```
 
-####Valloric/YouCompleteMe
+#### Valloric/YouCompleteMe
 ```
 <leader>g   该命令尝试执行它可以执行的“最明智的”GoTo操作。
 <leader>gi  查找当前行的头文件并跳转到它。
@@ -73,24 +73,24 @@ leader is ,
 <leader>gt  显示光标下的变量或方法的类型，以及父类型。
 ```
 
-####SirVer/ultisnips
+#### SirVer/ultisnips
 ```
 tab 生成代码块
 ```
 
-####danro/rename.vim
+#### danro/rename.vim
 ```
 :rename[!] {newname}
 ```
 
 
-####pbrisbin/vim-mkdir
+#### pbrisbin/vim-mkdir
 ```
 :e this/does/not/exist/file.txt
 :w
 ```
 
-####scrooloose/nerdcommenter
+#### scrooloose/nerdcommenter
 ```
 [count]<leader>cc   行数 注释
 [count]<leader>cl   左对齐注释
@@ -99,7 +99,7 @@ tab 生成代码块
 [count]<leader>cu   取消注释
 ```
 
-####tpope/vim-surround
+#### tpope/vim-surround
 ```
 ds 删除包围符号的命令是ds,后面加的字符表示要删除的符号
 "Hello world!"           ds"         Hello world!
@@ -117,14 +117,14 @@ Hello world!             ysiw)       Hello (world)!
 Hello w*orld!             ysiw(       Hello ( world )
 ```
 
-####godlygeek/tabular
+#### godlygeek/tabular
 ```
 <leader>a= 按等号格式化
 <leader>a: 按冒号格式化
 <leader>a" 按双引号格式化
 ```
 
-####Lokaltog/vim-easymotion
+#### Lokaltog/vim-easymotion
 ```
 <leader><leader>w(即,,w)和<leader><leader>b(即,,b)          跳转到当前光标前后的位置(w/b)
 <leader><leader>s(即,,s)然后输入要搜索的字母, 这个跳转是双向的   搜索跳转(s)
@@ -133,12 +133,29 @@ Hello w*orld!             ysiw(       Hello ( world )
 <leader><leader>.                                          重复上一次动作(.)
 ```
 
-####derekwyatt/vim-fswitch
+#### derekwyatt/vim-fswitch
 ```
 <leader>sw             切换.h .c 
 ```
 
-####matze/vim-move
+#### matze/vim-move
+```
+<C-k>   向上移动
+<C-j>   向下移动
 ```
 
+#### gcmt/wildfire.vim
+```
+<SPACE>     选择最近的文本对象
+<C-SPACE>       选择上一个最近的文本对象
+<leader>s 快速选择设置默认映射
+```
+
+#### terryma/vim-expand-region
+```
+v 快速选择文本
+```
+
+#### terryma/vim-multiple-cursors
+```
 ```

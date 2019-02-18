@@ -769,6 +769,14 @@ let g:move_key_modifier = 'C'
 
 " 智能选择
 " Plug 'gcmt/wildfire.vim'
+    " 选择最近的文本对象
+map <SPACE> <Plug>(wildfire-fuel)
+    " 选择上一个最近的文本对象
+vmap <C-SPACE> <Plug>(wildfire-water)
+    " 快速选择设置默认映射
+nmap <leader>s <Plug>(wildfire-quick-select)
+    
+let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "ip", "it"]
 
 
 " 快速选择文本
