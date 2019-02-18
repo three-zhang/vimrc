@@ -732,12 +732,26 @@ let g:NERDToggleCheckAllLines = 1
 
 " 文本对齐
 " Plug 'godlygeek/tabular'
-" 无配置
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:<CR>
+vmap <Leader>a: :Tabularize /:<CR>
+nmap <Leader>a" :Tabularize /"<CR>
+vmap <Leader>a" :Tabularize /"<CR>
 
 
 " 快速跳行
 " Plug 'Lokaltog/vim-easymotion'
-
+    " 这个设置使EasyMotion的工作方式类似于Vim的smartcase全局搜索选项。
+let g:EasyMotion_smartcase = 1
+    " 行级跳转(jk)
+map <Leader><Leader>j <Plug>(easymotion-j)
+map <Leader><Leader>k <Plug>(easymotion-k)
+    " 行内跳转(hl)
+map <Leader><leader>h <Plug>(easymotion-linebackward)
+map <Leader><leader>l <Plug>(easymotion-lineforward)
+    " 重复上一次的动作
+map <Leader><leader>. <Plug>(easymotion-repeat)
 
 " 切换头文件 (e.g. ".h" and ".cpp" files)
 " Plug 'derekwyatt/vim-fswitch'
