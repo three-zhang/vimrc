@@ -775,7 +775,7 @@ map <SPACE> <Plug>(wildfire-fuel)
 vmap <C-SPACE> <Plug>(wildfire-water)
     " 快速选择设置默认映射
 nmap <leader>s <Plug>(wildfire-quick-select)
-    
+
 let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "ip", "it"]
 
 
@@ -811,25 +811,25 @@ let g:multi_cursor_quit_key = '<Esc>'
 " 括号补全
 " Plug 'jiangmiao/auto-pairs'
     " 设置自动为文本添加圆括号的快捷键，默认为ALT+e。
-let g:AutoPairsShortcutFastWrap = '<M-e>' 
+let g:AutoPairsShortcutFastWrap = '<M-e>'
     " 设置调到下一层括号对的快捷键，默认为ALT+n。
-let g:AutoPairsShortcutJump = '<M-n>' 
+let g:AutoPairsShortcutJump = '<M-n>'
     " 设置撤销飞行模式的快捷键，默认为ALT+b。
-let g:AutoPairsShortcutBackInsert = '<M-b>' 
+let g:AutoPairsShortcutBackInsert = '<M-b>'
     " 把BACKSPACE键映射为删除括号对和引号，默认为1。
-let g:AutoPairsMapBS = 1 
+let g:AutoPairsMapBS = 1
     " 把ctrl+h键映射为删除括号对和引号，默认为1。
-let g:AutoPairsMapCh = 1 
+let g:AutoPairsMapCh = 1
     " 把ENTER键映射为换行并缩进，默认为1。
-let g:AutoPairsMapCR = 1 
+let g:AutoPairsMapCR = 1
     " 当g:AutoPairsMapCR为1时，且文本位于窗口底部时，自动移到窗口中间。
-let g:AutoPairsCenterLine = 1 
+let g:AutoPairsCenterLine = 1
     " 把SPACE键映射为在括号两侧添加空格，默认为1。
-let g:AutoPairsMapSpace = 1 
+let g:AutoPairsMapSpace = 1
     " 启用飞行模式，默认为0。
-let g:AutoPairsFlyMode = 0 
+let g:AutoPairsFlyMode = 0
     " 启用跳出多行括号对，默认为1，为0则只能跳出同一行的括号。
-let g:AutoPairsMultilineClose = 1 
+let g:AutoPairsMultilineClose = 1
 
 
 " 格式化代码

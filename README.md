@@ -147,8 +147,8 @@ Hello w*orld!             ysiw(       Hello ( world )
 #### gcmt/wildfire.vim
 ```
 <SPACE>     选择最近的文本对象
-<C-SPACE>       选择上一个最近的文本对象
-<leader>s 快速选择设置默认映射
+<C-SPACE>   选择上一个最近的文本对象
+<leader>s   快速选择设置默认映射
 ```
 
 #### terryma/vim-expand-region
@@ -158,4 +158,6 @@ v 快速选择文本
 
 #### terryma/vim-multiple-cursors
 ```
+<C-n>  启动
 ```
+
