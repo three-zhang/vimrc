@@ -40,7 +40,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " 代码缩进（开启影响性能）
-" Plug 'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
 
 " nginx 配置语法高亮
 Plug 'chr4/nginx.vim'
@@ -100,7 +100,7 @@ Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 " 代码片段
 Plug 'SirVer/ultisnips'
 
-" 补全规则
+" 代码片段规则
 Plug 'honza/vim-snippets'
 
 " vim中重命名
@@ -511,7 +511,7 @@ nnoremap <leader>bp :bp<CR>
 " 代码缩进
 " Plug 'Yggdroot/indentLine'
 
-" let g:indentLine_enabled = 1
+let g:indentLine_enabled = 1
 
 
 " nginx 配置语法高亮
@@ -673,8 +673,8 @@ nnoremap <leader>gde :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " :YcmCompleter GoToImprecise
     " 显示光标下的变量或方法的类型，以及父类型。
 nnoremap <leader>gt :YcmCompleter GetType<CR>
-    " force recomile with syntastic
-nnoremap <F6> :YcmForceCompileAndDiagnostics<CR>
+    " 编译语法检测
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 
 
 " ycm 配置文件
@@ -692,7 +692,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-b>"
     " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
-" 补全规则
+" 代码片段规则
 " Plug 'honza/vim-snippets'
 " 无配置
 
