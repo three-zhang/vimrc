@@ -88,9 +88,6 @@ Plug 'lilydjwg/fcitx.vim'
 " vim 中执行系统命令
 Plug 'christoomey/vim-run-interactive'
 
-" go插件
-Plug 'fatih/vim-go'
-
 " 代码补全
 Plug 'Valloric/YouCompleteMe', {'do':'python3 install.py --clang-completer --go-completer'}
 
@@ -98,10 +95,10 @@ Plug 'Valloric/YouCompleteMe', {'do':'python3 install.py --clang-completer --go-
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 " 代码片段
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 
 " 代码片段规则
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " vim中重命名
 Plug 'danro/rename.vim'
@@ -122,7 +119,7 @@ Plug 'godlygeek/tabular'
 Plug 'Lokaltog/vim-easymotion'
 
 " 切换头文件 (e.g. ".h" and ".cpp" files)
-Plug 'derekwyatt/vim-fswitch'
+" Plug 'derekwyatt/vim-fswitch'
 
 " 优化移动插件
 Plug 'matze/vim-move'
@@ -592,28 +589,6 @@ imap <silent> <F9> <Plug>StopMarkdownPreview
 nnoremap <leader>ri :RunInInteractiveShell<space>
 
 
-" go插件
-" Plug 'fatih/vim-go'
-    " 禁止自动下载
-let g:go_disable_autoinstall = 0
-    " 函数高亮
-let g:go_highlight_functions = 1
-    " 方法高亮
-let g:go_highlight_methods = 1
-    " 结构体高亮
-let g:go_highlight_structs = 1
-    " 高亮
-let g:go_highlight_operators = 1
-    " 高亮
-let g:go_highlight_build_constraints = 1
-    " 安装插件
-let g:go_fmt_command = "goimports"
-"     " 关闭保存自动格式化
-" let g:go_fmt_autosave = 0
-"     " 关闭保存自动格式化
-" let g:go_asmfmt_autosave = 0
-
-
 " 代码补全
 " Plug 'Valloric/YouCompleteMe'
     " 自动关闭补全
@@ -685,11 +660,11 @@ nnoremap <F12> :YcmGenerateConfig<CR>
 " 代码片段
 " Plug 'SirVer/ultisnips'
 
-let g:UltiSnipsExpandTrigger="<Tab>"
-let g:UltiSnipsJumpForwardTrigger="<C-f>"
-let g:UltiSnipsJumpBackwardTrigger="<C-b>"
+" let g:UltiSnipsExpandTrigger="<Tab>"
+" let g:UltiSnipsJumpForwardTrigger="<C-f>"
+" let g:UltiSnipsJumpBackwardTrigger="<C-b>"
     " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+" let g:UltiSnipsEditSplit="vertical"
 
 " 代码片段规则
 " Plug 'honza/vim-snippets'
@@ -757,7 +732,7 @@ map <Leader><leader>. <Plug>(easymotion-repeat)
 " Plug 'derekwyatt/vim-fswitch'
 
     " ,sw 就能在实现 cpp 文件和 h文件间切换
-nmap <silent> <Leader>sw :FSHere<cr>
+" nmap <silent> <Leader>sw :FSHere<cr>
 
 
 " 优化移动插件
