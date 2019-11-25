@@ -58,15 +58,6 @@ Plug 'vim-scripts/TaskList.vim'
 " 显示文件类型图标（开启影响性能）
 " Plug 'ryanoasis/vim-devicons'
 
-" markdown 语法高亮
-Plug 'plasticboy/vim-markdown'
-
-" markdown 数学符号预览
-Plug 'iamcco/mathjax-support-for-mkdp'
-
-" markdown 预览
-Plug 'iamcco/markdown-preview.vim'
-
 if has('win32')
     " gvim 透明dll
     Plug 'mattn/vimtweak'
@@ -423,38 +414,8 @@ let g:tagbar_ctags_bin="/usr/local/bin/ctags"
 let g:tagbar_width=50
     " 自动对焦
 let g:tagbar_autofocus = 1
-    "如果是c语言的程序的话，tagbar自动开启
-" autocmd BufReadPost *.cpp,*.c,*.h,*.py,*.hpp,*.cc,*.cxx call tagbar#autoopen()
     " F3开启关闭
 nmap <silent> <F3> :Tagbar<cr>
-
-let g:tagbar_type_go = {
-    \ 'ctagstype' : 'go',
-    \ 'kinds'     : [
-        \ 'p:package',
-        \ 'i:imports:1',
-        \ 'c:constants',
-        \ 'v:variables',
-        \ 't:types',
-        \ 'n:interfaces',
-        \ 'w:fields',
-        \ 'e:embedded',
-        \ 'm:methods',
-        \ 'r:constructor',
-        \ 'f:functions'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 't' : 'ctype',
-        \ 'n' : 'ntype'
-    \ },
-    \ 'scope2kind' : {
-        \ 'ctype' : 't',
-        \ 'ntype' : 'n'
-    \ },
-    \ 'ctagsbin'  : 'gotags',
-    \ 'ctagsargs' : '-sort -silent'
-\ }
 
 
 " NERDTree是一个用于浏览文件系统的树形资源管理外挂。
@@ -548,37 +509,6 @@ map <leader>todo <Plug>TaskList
 " 显示文件类型图标
 " Plug 'ryanoasis/vim-devicons'
 " 无配置
-
-
-" markdown 语法高亮
-" Plug 'plasticboy/vim-markdown'
-
-    " LaTex 数学公式
-let g:vim_markdown_math = 1
-    " YAML
-let g:vim_markdown_frontmatter = 1
-    " JSON
-let g:vim_markdown_json_frontmatter = 1
-    " TOML
-let g:vim_markdown_toml_frontmatter = 1
-
-
-" markdown 数学符号预览
-" Plug 'iamcco/mathjax-support-for-mkdp'
-" 无配置
-
-
-" markdown 预览
-" Plug 'iamcco/markdown-preview.vim'
-
-    " 普通模式下 打开预览
-nmap <silent> <F8> <Plug>MarkdownPreview
-    " 插入模式下 关闭预览
-imap <silent> <F8> <Plug>MarkdownPreview
-    " 普通模式下 关闭预览
-nmap <silent> <F9> <Plug>StopMarkdownPreview
-    " 普通模式下 关闭预览
-imap <silent> <F9> <Plug>StopMarkdownPreview
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
