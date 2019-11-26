@@ -58,13 +58,6 @@ Plug 'vim-scripts/TaskList.vim'
 " 显示文件类型图标（开启影响性能）
 " Plug 'ryanoasis/vim-devicons'
 
-if has('win32')
-    " gvim 透明dll
-    Plug 'mattn/vimtweak'
-    " gvim 透明插件
-    Plug 'mattn/transparency-windows-vim'
-endif
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -86,12 +79,6 @@ Plug 'Valloric/YouCompleteMe', {'do':'python3 install.py --clang-completer --go-
 " ycm 配置文件
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
-" 代码片段
-" Plug 'SirVer/ultisnips'
-
-" 代码片段规则
-" Plug 'honza/vim-snippets'
-
 " vim中重命名
 Plug 'danro/rename.vim'
 
@@ -109,9 +96,6 @@ Plug 'godlygeek/tabular'
 
 " 快速跳行
 Plug 'Lokaltog/vim-easymotion'
-
-" 切换头文件 (e.g. ".h" and ".cpp" files)
-" Plug 'derekwyatt/vim-fswitch'
 
 " 优化移动插件
 Plug 'matze/vim-move'
@@ -163,17 +147,8 @@ call plug#end()
 "基础配置""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " 判断系统
-if has('win32')
-    " 隐藏菜单栏
-    set guioptions-=m
-    " 隐藏工具栏
-    set guioptions-=T
     " 设置字体
-    set guifont=DroidSansMonoforPowerline:h9
-else
-    " 设置字体
-    set guifont=DroidSansMono_Nerd_Font:h12
-endif
+set guifont=DroidSansMono_Nerd_Font:h12
 
 " For Neovim 0.1.3 and 0.1.4 - https://github.com/neovim/neovim/pull/2198
 if (has('nvim'))
@@ -566,7 +541,7 @@ let g:ycm_complete_in_strings = 1
     " 设置在下面几种格式的文件上屏蔽ycm
 let g:ycm_filetype_blacklist = {'tagbar' : 1, 'nerdtree' : 1}
     " 回车选中当前项
-let g:ycm_key_list_stop_completion = ['<Enter>']
+" let g:ycm_key_list_stop_completion = ['<Enter>']
     " youcompleteme  默认tab  s-tab 和 ultisnips 冲突
     " 弹出列表时选择第1项的快捷键
 let g:ycm_key_list_select_completion = ['<Down>']
@@ -599,20 +574,6 @@ nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
     " 生成项目 .ycm_extra_conf.py 文件
 nnoremap <F12> :YcmGenerateConfig<CR>
-
-
-" 代码片段
-" Plug 'SirVer/ultisnips'
-
-" let g:UltiSnipsExpandTrigger="<Tab>"
-" let g:UltiSnipsJumpForwardTrigger="<C-f>"
-" let g:UltiSnipsJumpBackwardTrigger="<C-b>"
-    " If you want :UltiSnipsEdit to split your window.
-" let g:UltiSnipsEditSplit="vertical"
-
-" 代码片段规则
-" Plug 'honza/vim-snippets'
-" 无配置
 
 
 " vim中重命名
@@ -671,12 +632,6 @@ map <Leader><leader>h <Plug>(easymotion-linebackward)
 map <Leader><leader>l <Plug>(easymotion-lineforward)
     " 重复上一次的动作
 map <Leader><leader>. <Plug>(easymotion-repeat)
-
-" 切换头文件 (e.g. ".h" and ".cpp" files)
-" Plug 'derekwyatt/vim-fswitch'
-
-    " ,sw 就能在实现 cpp 文件和 h文件间切换
-" nmap <silent> <Leader>sw :FSHere<cr>
 
 
 " 优化移动插件
