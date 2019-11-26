@@ -2,10 +2,8 @@
 
 mac install
 ```shell
-brew install go
 brew install ag
 brew install ctags
-go get -u github.com/jstemmer/gotags
 ```
 
 vim
@@ -34,10 +32,8 @@ GoInstallBinaries
 ### F7
 
 ### F8
-打开 MarkDown 预览
 
 ### F9
-关闭 MarkDown 预览
 
 ### F10
 
@@ -71,11 +67,6 @@ leader is ,
 <leader>gdf 查找光标下的标识符并跳转到其定义。这仅适用于符号的定义位于当前翻译单元中时。
 <leader>gde 跳转两者结合体
 <leader>gt  显示光标下的变量或方法的类型，以及父类型。
-```
-
-#### SirVer/ultisnips
-```
-tab 生成代码块
 ```
 
 #### danro/rename.vim
@@ -133,10 +124,6 @@ Hello w*orld!             ysiw(       Hello ( world )
 <leader><leader>.                                          重复上一次动作(.)
 ```
 
-#### derekwyatt/vim-fswitch
-```
-<leader>sw             切换.h .c 
-```
 
 #### matze/vim-move
 ```
